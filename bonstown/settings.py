@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bonssite.apps.BonssiteConfig',
+    'tinymce', #rich text editor
 ]
 
 MIDDLEWARE = [

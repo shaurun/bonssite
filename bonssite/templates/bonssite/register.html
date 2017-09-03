@@ -1,0 +1,18 @@
+{%  extends 'bonssite/common/top.html' %}
+
+{% block title %}
+    Авторизация
+{% endblock %}
+
+{% block content %}
+    <h1>Вход/регистрация</h1>
+
+    <div>
+        <form action="/register/" method="post">
+            {%  csrf_token %}
+            {{ form }}
+            <input class="button" type="submit" value="Зарегистрироваться"/>
+            <a href="{% url 'login' %}">Войти</a>
+        </form>
+    </div>
+{% endblock %}

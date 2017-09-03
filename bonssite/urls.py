@@ -19,5 +19,8 @@ from bonssite import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^articles/(?P<article_id>[0-9]+)/?$', views.article, name='article')
+    url(r'^articles/(?P<article_id>[0-9]+)/?$', views.article, name='article'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^register/$', views.register, name='register'),
+    url(r'^logout/$', views.logout, name='logout')
 ]

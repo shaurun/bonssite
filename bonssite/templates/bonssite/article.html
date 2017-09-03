@@ -6,7 +6,7 @@
 
 {% block content %}
     <h1>{{ article.title }}</h1>
-    <div>{{ article.content }}</div>
+    <div>{{ article.content|safe }}</div>
     <p>{{ article.author.username }}</p>
     <p>Дата создания: {{ article.creationDate }}</p>
     <p>Последний раз редактировалось: {{ article.creationDate }}</p>
