@@ -1,0 +1,17 @@
+.header {
+    min-height: 20px;
+    width: 100%;
+    background-color: azure;
+}
+
+.center {
+    position: relative;
+}
+
+.bottom {
+    margin-bottom: 0;
+    min-height: 20px;
+    width: 100%;
+    background-color: beige;
+    position: relative;
+}

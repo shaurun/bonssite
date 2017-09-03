@@ -1,0 +1,20 @@
+{%  extends 'bonssite/common/top.html' %}
+
+{% block title %}
+    Бонстаун
+{% endblock %}
+
+{% block content %}
+    <h1>Главная страница сайта</h1>
+
+    <ul>
+    {% for section in sections %}
+        <li> {{ section.title }}</li>
+        <ul>
+            {% for article in section.get_section_articles %}
+                <li> <a href="{% url 'article' article.id %}"> {{ article.title }} </a></li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    </ul>
+{% endblock %}
