@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073e4ec2-702e-4e0c-b701-bd3fc7a8d6c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/12 (1).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/12 (2).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/12 (3).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/12 (4).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/12 (5).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/12 (6).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/12 (7).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/12 (8).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/newspaper.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonssite/static/bonssite/common.css" afterPath="$PROJECT_DIR$/bonssite/static/bonssite/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonssite/templates/bonssite/article.html" afterPath="$PROJECT_DIR$/bonssite/templates/bonssite/article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonssite/templates/bonssite/common/top.html" afterPath="$PROJECT_DIR$/bonssite/templates/bonssite/common/top.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonssite/templates/bonssite/home.html" afterPath="$PROJECT_DIR$/bonssite/templates/bonssite/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonssite/urls.py" afterPath="$PROJECT_DIR$/bonssite/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bonssite/views.py" afterPath="$PROJECT_DIR$/bonssite/views.py" />
-    </list>
+    <list default="true" id="073e4ec2-702e-4e0c-b701-bd3fc7a8d6c5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,13 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bonssite/static/bonssite/common.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="496">
               <caret line="295" column="29" lean-forward="false" selection-start-line="295" selection-start-column="29" selection-end-line="295" selection-end-column="29" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bank.gif" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bonssite/static/bonssite/bank.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -321,13 +301,13 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30898875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30898875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -641,6 +621,11 @@
           <caret line="295" column="29" lean-forward="false" selection-start-line="295" selection-start-column="29" selection-end-line="295" selection-end-column="29" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bonssite/static/bonssite/bank.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
