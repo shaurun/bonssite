@@ -1,22 +1,59 @@
 {% load staticfiles %}
 
 <!DOCTYPE html>
-<html lang="en">
-<link>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
-    <link href="{% static 'bonssite/common.css' %}" rel="stylesheet"/>
-</head>
-<body>
-<div id="user">
-    {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Выйти ({{ user.username }})</a>
-    {% else %}
-        <a href="{% url 'login' %}">Войти</a> | <a href="{% url 'register' %}">Зарегистрироваться</a>
-    {% endif %}
-</div>
-<div class="header"><a href="{% url 'home' %}">Главная</a> </div>
-<div class="center">{% block content %}{% endblock %}</div>
-<div class="bottom"></div>
-</body>
+<html>
+   <head>
+      <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
+      <title>{% block title %}{% endblock %}</title>
+      <meta name="viewport" content="width=device-width">
+      <meta charset="UTF-8">
+       <link href="{% static 'bonssite/common.css' %}" rel="stylesheet"/>
+   </head>
+   <body>
+      <div class="head">
+         <div class="headerobjectswrapper">
+            <header>Бонстаун</header>
+         </div>
+         <div class="subhead">Форумная ролевая игра</div>
+      </div>
+      <div class="content">
+            <div class="menu">
+                <div id="user">
+                    <p><span class="headline">Личный кабинет</span></p>
+                    <p>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}">Выйти ({{ user.username }})</a>
+                    {% else %}
+                         <form action="/login/" method="post">
+                        {%  csrf_token %}
+                        {%  if login_error %}
+                            <label class="error">{{ login_error }}</label>
+                        {%  endif %}
+                         <div>
+                            <label for="username">Имя пользователя</label>
+                            <input type="text" name="username" id="username" {% if username %}value="{{ username }}"{% endif %}/>
+                         </div>
+                        <div>
+                            <label for="password">Пароль</label>
+                            <input type="password" name="password" id="password" {% if password %}value="{{ password }}"{% endif %}/>
+                        </div>
+                         <div>
+                            <input class="link" type="submit" name="action" value="Вход"/> |
+                            <input class="link" type="submit" name="action" value="Регистрация"/>
+                         </div>
+                    </form>
+                    {% endif %}
+                    </p>
+                </div>
+
+                {% for section in sections %}
+                    <p><span class="headline">{{ section.title }}</span></p>
+                        {% for article in section.get_section_articles %}
+                            <p class="small"><a href="{% url 'article' article.id %}"> {{ article.title }} </a></p>
+                        {% endfor %}
+                {% endfor %}
+            </div>
+          {% block content %}{% endblock %}
+      </div>
+   </body>
 </html>

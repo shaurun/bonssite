@@ -1,4 +1,5 @@
 from django.contrib import auth
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.forms import UserCreationForm
 
@@ -8,9 +9,9 @@ from django.template.context_processors import csrf
 from django.contrib import auth
 from bonssite.models import Section, Article
 
+sections = Section.objects.all();
 
 def home(request):
-    sections = Section.objects.all();
     context = {
         'sections': sections,
         'user': auth.get_user(request)
@@ -20,6 +21,7 @@ def home(request):
 def article(request, article_id):
     article = get_object_or_404(Article, id=article_id);
     context = {
+        'sections': sections,
         'article' : article,
         'user': auth.get_user(request)
     }
@@ -32,15 +34,26 @@ def login(request):
     if (request.POST):
         username = request.POST.get('username', '');
         password = request.POST.get('password', '');
-        user = auth.authenticate(username=username, password=password);
-        if (user is not None):
-            auth.login(request, user);
-            return redirect("/");
+        args['username'] = username;
+        args['password'] = password;
+        if (username == '' or password == ''):
+            args['login_error'] = "Заполните имя пользователя и пароль";
+            return render(request, "bonssite/home.html", args);
         else:
-            args['login_error'] = "Пользователь не найден.";
-            return render(request, "bonssite/login.html", args);
-    else:
-        return render(request, "bonssite/login.html", args);
+            if (request.POST.get('action') == "Регистрация"):
+                if (User.objects.filter(username=username).exists()):
+                    args['login_error'] = "Пользователь с таким именем уже существует.";
+                    return render(request, "bonssite/home.html", args);
+                user = User.objects.create_user(username=username, password=password);
+            elif (request.POST.get('action') == "Вход"):
+                user = auth.authenticate(username=username, password=password);
+
+            if (user is not None):
+                auth.login(request, user);
+                return redirect("/");
+            else:
+                args['login_error'] = "Пользователь не найден.";
+                return render(request, "bonssite/home.html", args);
 
 def logout(request):
     auth.logout(request);
@@ -61,3 +74,12 @@ def register(request):
         else:
             args['form'] = new_user_form;
     return render(request, "bonssite/register.html", args);
+
+
+def newspaper(request):
+    sections = Section.objects.all();
+    context = {
+        'sections': sections,
+        'user': auth.get_user(request)
+    }
+    return render(request, "bonssite/newspaper.html", context);

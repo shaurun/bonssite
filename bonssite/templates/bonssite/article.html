@@ -5,9 +5,15 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ article.title }}</h1>
-    <div>{{ article.content|safe }}</div>
-    <p>{{ article.author.username }}</p>
-    <p>Дата создания: {{ article.creationDate }}</p>
-    <p>Последний раз редактировалось: {{ article.creationDate }}</p>
+    <div class="collumns">
+        <div class="collumn size4">
+            <div class="head">
+                <span class="headline hl3">{{ article.title }}</span>
+                <p><span class="headline hl4">by {{ article.author.username }}</span></p>
+            </div>
+            <p>{{ article.content|safe }}</p>
+            <p>Дата создания: {{ article.creationDate }}</p>
+            <p>Последний раз редактировалось: {{ article.creationDate }}</p>
+        </div>
+    </div>
 {% endblock %}

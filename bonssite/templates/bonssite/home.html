@@ -1,20 +1,69 @@
 {%  extends 'bonssite/common/top.html' %}
+{% load staticfiles %}
 
 {% block title %}
     Бонстаун
 {% endblock %}
 
 {% block content %}
-    <h1>Главная страница сайта</h1>
+    <div class="collumns">
+        <div class="collumn size4">
+            <div class="head">
+                          <span class="headline hl3">Добро пожаловать на ролевой портал</span>
+                          <p><span class="headline hl4">Люди никогда не обнаруживали большего остроумия, чем в изобретении игры</span></p>
+            </div>
+            <img src="{% static 'bonssite/town2.jpg' %}"/>
+            <p>Бонстаун - простой город в Америке. В нем живут люди: работают, учатся, приезжают и уезжают. Их жизнь тесно переплетается с нашей, но... Вы никогда не встретитесь с ними. Не обнаружите этот город на карте. Ведь место, в котором он существует, - альтернативная реальность, наше <i>воображение</i>.</p>
+            <!--<p>Ролевая игра, по сути, - смена личин. Человек создает образ, отголосок той жизни, которую по какой-то причине не может прожить сам. Здесь начинаются его приключения в совершенно ином амплуа, с новой индивидуальностью, другим жизненным опытом, мышлением, целями. Задача ролевого портала - создать мир вокруг этого нового образа, оживить его, вдохновить.
+            И с другой стороны, сам образ изменяет этот ролевой мир, одушевляет его, дает ему ощущение полноты и насыщенности. Здесь важна гармония. Существует множество ролевых игр, и нужно уметь выбрать ту, в которой мир не будет препятствием герою, а герой - не сломает мир.</p>-->
+            <p>Что предлагает игроку Бонстаун? Альтернативу реальности, в которой становятся явью ужасы мифов и историй. Сознание людей, не обремененное тем, что рядом существует кто-то кроме, потому что <i>они</i> научились скрываться. Легкие нотки чудовищной <i>тайной</i> магии, действенной, не смотря на развитые технологии. Бонстаун предлагает мир, столкнувшись с секретами которого, герой станет отличаться от большинства.</p>
+            <p>Но в то же время, Бонстаун - это и обычный американский город. В нем множество жителей, не касавшихся мистики, а если и затронувшей ее случайно - не верящих в это. Жизнь этих людей - досуг типичного человека: местного трудяги, туриста, бандита, - пусть вас не ограничивает фантазия.
+                Подробнее о правилах игры, о мире, и о многом другом можно узнать в соовтетствующих разделах.</p>
 
-    <ul>
-    {% for section in sections %}
-        <li> {{ section.title }}</li>
-        <ul>
-            {% for article in section.get_section_articles %}
-                <li> <a href="{% url 'article' article.id %}"> {{ article.title }} </a></li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
-    </ul>
+        </div>
+            <div class="collumn">
+               <div class="head">
+                  <span class="headline hl5">Шахта открыта</span>
+                  <p><span class="headline hl6">Мэр объявил об открытии шахты</span></p>
+               </div>
+               <p>Дик сказал, что ведь у нас, в Америке, хватает нефти. Роббинс стукнул кулаком по столу. «Никогда никому ничего не хватает. Это основной закон термодинамики. Мне никогда не хватало виски... Вот вы — молодой человек, вам когда-нибудь хватало баб? Так вот, ни «Стандард Ойл», ни «Ройал Датч Шелл» никогда не будет хватать нефти».</p>
+               <figure class="figure">
+                  <img class="media" src="{% static 'bonssite/coal_mine.jpg' %}" alt="">
+                  <figcaption class="figcaption">Hermine hoping for courage.</figcaption>
+               </figure>
+               <p>It was this, as much as anything, that gave people courage, and I suppose the new arrivals from Woking also helped to restore confidence.  At any rate, as the dusk came on a slow, intermittent movement upon the sand pits began, a movement that seemed to gather force as the stillness of the evening about the cylinder remained unbroken.  Vertical black figures in twos and threes would advance, stop, watch, and advance again, spreading out as they did so in a thin irregular crescent that promised to enclose the pit in its attenuated horns.  I, too, on my side began to move towards the pit.</p>
+               <p>Then I saw some cabmen and others had walked boldly into the sand pits, and heard the clatter of hoofs and the gride of wheels.  I saw a lad trundling off the barrow of apples.  And then, within thirty yards of the pit, advancing from the direction of Horsell, I noted a little black knot of men, the foremost of whom was waving a white flag.</p>
+            </div>
+            <div class="collumn">
+               <div class="head">
+                  <span class="headline hl1">Инвестируй в будущее</span>
+                  <p><span class="headline hl2">Амбиции банкира</span></p>
+               </div>
+               <p>Я считаю, что институт банков более опасен, чем вооруженная армия. Если американский народ позволит частным банкам управлять выпуском валюты, банки и корпорации, которыми заправляют банкиры, будут отнимать у людей всю их собственность до тех пор, пока их дети не проснутся бездомными на земле, когда-то завоеванной их предками.</p>
+               <figure class="figure">
+                  <img class="media" src="{% static 'bonssite/bank.gif' %}" alt="">
+                  <figcaption class="figcaption">"This time, let go your conscious self and act on instinct."</figcaption>
+               </figure>
+               <p>Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. <span class="citation">"Don't under&shy;estimate the Force. I suggest you try it again, Luke."</span> This time, let go your conscious self and act on instinct. In my experience, there is no such thing as luck. You're all clear, kid. Let's blow this thing and go home!</p>
+               <p>You don't believe in the Force, do you? Partially, but it also obeys your commands. The plans you refer to will soon be back in our hands. As you wish.</p>
+            </div>
+            <div class="collumn">
+               <div class="head">
+                  <span class="headline hl3">Запомните это лицо</span>
+                  <p><span class="headline hl4">Нас никто не любит, если не считать уголовного розыска</span></p>
+               </div>
+                <img class="media" src="{% static 'bonssite/rozysk.png' %}" alt="">
+               <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath</p>
+            </div>
+            <div class="collumn">
+               <div class="head">
+                  <span class="headline hl1">Кому это выгодно</span>
+                  <p><span class="headline hl4">"Квартал под снос?!" - жители в недоумении</span></p>
+               </div>
+               <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. </p>
+               <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. </p>
+            </div>
+
+    </div>
+
 {% endblock %}
